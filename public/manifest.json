@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "name": "Intranet Redesign",
+    "description": "{EPITECH} Intranet UI/UX changer.",
+    "version": "0.0.1",
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "storage",
+        "webRequest"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://intra.epitech.eu/*"],
+            "js": ["scripts/bypass.js", "scripts/inject.js"],
+            "css": ["style/inject.css"]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "matches": ["https://intra.epitech.eu/*"],
+            "resources": ["index.html"]
+        }
+    ],
+    "author": "mallory-scotton",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Open"
+    },
+    "icons": {
+        "16": "./logo16.png",
+        "48": "./logo48.png",
+        "128": "./logo128.png"
+    }
+}
