@@ -13,7 +13,8 @@
         {
             "matches": ["https://intra.epitech.eu/*"],
             "js": ["scripts/bypass.js", "scripts/inject.js"],
-            "css": ["style/inject.css"]
+            "css": ["style/inject.css"],
+            "exclude_matches": ["*://intra.epitech.eu/*.pdf"]
         }
     ],
     "web_accessible_resources": [
