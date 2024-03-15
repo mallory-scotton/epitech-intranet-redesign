@@ -110,10 +110,8 @@
     /** sending the request */
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
-        if (xhttp.readyState === 4) {
-            document.getElementById("status").innerHTML = "Refresh your page.";
-            location.reload(true);
-        }
+        /** request completed, reload the page */
+        if (xhttp.readyState === 4) location.reload(true);
     };
     xhttp.open("POST", "/?format=json", true);
     xhttp.setRequestHeader(header, result);
